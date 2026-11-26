@@ -3,7 +3,7 @@
 # 출처: https://free.promptwhatstudio.com/claude-token-saver-tools
 set -e
 
-echo "[1/2] Graphify 설치 (Python 3.11.5~3.14 필요)"
+echo "[1/4] Graphify 설치 (Python 3.11.5~3.14 필요)"
 if command -v pipx >/dev/null 2>&1; then
   pipx install graphifyy
 else
@@ -11,8 +11,14 @@ else
 fi
 graphify install
 
-echo "[2/2] OmniRoute 설치 (Node.js 22 또는 24 LTS 필요)"
+echo "[2/4] OmniRoute 설치 (Node.js 22 또는 24 LTS 필요)"
 npm install -g omniroute
+
+echo "[3/4] Scrapling (웹 스크래핑, Python)"
+pip install "scrapling[ai]"
+
+echo "[4/4] book-to-skill (책 → 스킬 변환)"
+npx skills add virgiliojr94/book-to-skill
 
 cat <<'MSG'
 

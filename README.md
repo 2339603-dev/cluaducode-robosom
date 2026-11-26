@@ -36,3 +36,26 @@ omniroute
 3. 공식 문서 「Claude Code Config」 대로 주소 `http://localhost:20128/v1`, 모델 `auto` 설정
 
 토큰을 공짜로 주는 것이 아니라 각 제공사의 무료 등급을 묶는 방식입니다. 제공사별 한도·약관을 확인하세요.
+
+---
+
+# Claude 무료 레포 10개
+
+플러그인 형태인 8개는 `.claude/settings.json` 에 등록되어 있어, 이 저장소를 클로드 코드로 열면 신뢰 확인 후 자동으로 설치·활성화됩니다.
+나머지 2개(Scrapling, book-to-skill)는 `setup-token-savers.sh` 로 설치합니다.
+
+| # | 이름 | 저장소 | 이 저장소에서 |
+|---|---|---|---|
+| 1 | unslop | [heydamir/unslop](https://github.com/heydamir/unslop) | 자동 (`unslop@heydamir`) |
+| 2 | UI/UX Pro Max | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 자동 (`ui-ux-pro-max@ui-ux-pro-max-skill`) |
+| 3 | Diagram Design | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | 자동 (`diagram-design@diagram-design`) |
+| 4 | Humanizer | [blader/humanizer](https://github.com/blader/humanizer) | 자동 (`humanizer@humanizer`) |
+| 5 | Last 30 Days | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 자동 (`last30days@last30days-skill`) |
+| 6 | Scrapling | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 스크립트 (`pip install "scrapling[ai]"`) |
+| 7 | book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 스크립트 (`npx skills add virgiliojr94/book-to-skill`) |
+| 8 | Ponytail | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 자동 (`ponytail@ponytail`) |
+| 9 | Caveman | [juliusbrussee/caveman](https://github.com/juliusbrussee/caveman) | 자동 (`caveman@caveman`) |
+| 10 | Superpowers | [obra/superpowers](https://github.com/obra/superpowers) | 자동 (`superpowers@claude-plugins-official`) |
+
+필요 없는 플러그인은 클로드 코드에서 `/plugin` 으로 끄거나, `.claude/settings.json` 의 해당 줄을 `false` 로 바꾸세요.
+플러그인을 많이 켤수록 스킬 설명이 매 대화에 실려 토큰을 조금씩 더 씁니다.
